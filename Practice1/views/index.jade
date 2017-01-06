@@ -2,11 +2,11 @@
 
 block content
 
-  //-h1= title
-  //-p Welcome to #{title}
+    //-h1= title
+    //-p Welcome to #{title}
 
-  nav.navbar.navbar-inverse
-      .container-fluid
+    nav.navbar.navbar-inverse
+        .container-fluid
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
             span.icon-bar
@@ -43,42 +43,25 @@ block content
         |     
         p Some text that represents &quot;Me&quot;...
     .container-fluid.bg-5.text-center(style='max-width: 1200px')
-      h3 Some of my Work
-      br
-      |   
-      .row
-        .col-sm-4
-          p Some text..
-          |       
-          img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
-        |     
-        .col-sm-4
-          p Some text..
-          |       
-          img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
-        |     
-        .col-sm-4
-          p Some text..
-          |       
-          img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
-          br
+        h3 Some of my Work
+        br
+        |   
+        .row
+            -for(var i=0;i<3;i++){
+            .col-sm-4
+                p Some text..
+                |       
+                img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
+            -}
+    br
     .container-fluid.bg-5.text-center(style='max-width: 1200px')
-      .row
-        .col-sm-4
-          p Some text..
-          |       
-          img.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
-        |     
-        .col-sm-4
-          p Some text..
-          |       
-          img.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
-        |     
-        .col-sm-4
-          p Some text..
-          |       
-          img.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
-          br
-          br
+        .row
+            -for(var i=0;i<3;i++){
+            .col-sm-4
+                p Some text..
+                |       
+                img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
+            -}
+    br
     footer.bg-3.container-fluid.text-center
-            p Footer Text
+        p Footer Text
