@@ -35,10 +35,13 @@
     <Content Include="NodeMVA.sln" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="public\css\styles.css" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\css\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
     <Folder Include="typings\" />
