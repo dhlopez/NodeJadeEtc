@@ -1,0 +1,14 @@
+{
+  "name": "practice1",
+  "version": "0.0.0",
+  "description": "Practice1",
+  "main": "server.js",
+  "author": {
+    "name": "dlopez"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "pug": "^2.0.0-beta6"
+  }
+}
