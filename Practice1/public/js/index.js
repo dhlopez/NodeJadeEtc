@@ -8,5 +8,12 @@ $('#send-message-btn').click(function () {
     return false;
 });
 socket.on('chat', function (msg) {
-    $('#messages').append($('<p>').text(msg));
+    $('.customText').each(function () {
+        alert($('.customText').text());
+        if ($('.customText').text() == "Some text..") {
+            
+            $('.customText').text(msg);
+        }
+    });
+        
 });

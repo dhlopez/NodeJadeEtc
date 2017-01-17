@@ -23,9 +23,13 @@ serve.listen(app.get('port'), function () {
 
 
 io.on('connection', function (socket) {
+    socket.emit('chat', 'a user connected');
     console.log('a user connected');
 
     socket.on('disconnect', function () {
         console.log('user disconnected');
+    });
+    socket.on('chat', function (msg) {
+        socket.broadcast.emit('chat', msg);
     });
 });
