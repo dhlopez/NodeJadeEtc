@@ -2,13 +2,21 @@
   "name": "practice1",
   "version": "0.0.0",
   "description": "Practice1",
-  "main": "server.js",
+  "main": "app.js",
   "author": {
     "name": "dlopez"
   },
   "dependencies": {
     "express": "^4.14.0",
     "jade": "^1.11.0",
-    "pug": "^2.0.0-beta6"
+    "pug": "^2.0.0-beta6",
+    "socket.io": "^1.7.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

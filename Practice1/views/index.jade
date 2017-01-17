@@ -56,10 +56,12 @@ block content
         .row
             -for(var i=0;i<3;i++){
             .col-sm-4
-                p Some text..
+                p#customText Some text..
                 |       
                 img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
             -}
     br
     footer.bg-3.container-fluid.text-center
         p Footer Text
+block body_end
+  script(type='text/javascript' src='/js/index.js')

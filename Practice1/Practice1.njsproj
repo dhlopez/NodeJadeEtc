@@ -30,6 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="public\js\index.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="app.js" />
     <Content Include="NodeMVA.sln" />
@@ -42,7 +43,9 @@
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="public\css\" />
+    <Folder Include="public\js\" />
     <Folder Include="routes\" />
+    <Folder Include="typings\globals\socket.io\" />
     <Folder Include="views\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
@@ -52,6 +55,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\pug\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\socket.io\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
