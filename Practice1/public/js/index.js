@@ -1,4 +1,5 @@
 ﻿var socket = io();
+var word= []
 
 $('#send-message-btn').click(function () {
     var msg = $('#message-box').val();
@@ -8,11 +9,14 @@ $('#send-message-btn').click(function () {
     return false;
 });
 socket.on('chat', function (msg) {
-    $('.customText').each(function () {
-        alert($('.customText').text());
-        if ($('.customText').text() == "Some text..") {
-            
-            $('.customText').text(msg);
+    var p = $("[id^=pid]").toArray();
+   $("[id^=pid]").each(function () {
+        //alert(this.text);
+        //$(this).text("changed text");
+       if ($(this).text() == "Some text..") {
+            //alert(this.text);
+            $(this).text("changed text");
+            return false;
         }
     });
         

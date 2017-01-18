@@ -47,16 +47,16 @@ block content
         .row
             -for(var i=0;i<3;i++){
             .col-sm-4
-                p.customText Some text..
+                p(id='pid'+i) Some text..
                 |       
                 img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
             -}
     br
     .container-fluid.bg-5.text-center(style='max-width: 1200px')
         .row
-            -for(var i=0;i<3;i++){
+            -for(var i=3;i<6;i++){
             .col-sm-4
-                p.customText Some text..
+                p(id='pid'+i) Some text..
                 |       
                 img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
             -}
