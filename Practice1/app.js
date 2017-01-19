@@ -11,7 +11,14 @@ app.set('view engine', 'jade');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', routes.index);
+//app.get('/', routes.index);
+app.get('/', function (req, res) {
+    var words = ["Some text..", "Some text..", "Some text..", "Some text..", "Some text..", "Some text.."];
+    res.render('index', {
+        outwords: JSON.stringify(words)
+    });
+});
+
 
 var serve = http.createServer(app); 
 var io = require('socket.io')(serve);

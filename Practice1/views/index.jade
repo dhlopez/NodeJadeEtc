@@ -2,7 +2,10 @@
 
 block content
 
-
+    script(type='text/javascript'). 
+        var awords = JSON.parse('!{outwords}');
+        alert(awords[0]);
+        console.log(awords[0]);
     nav.navbar.navbar-inverse
         .container-fluid
         .navbar-header
@@ -47,7 +50,7 @@ block content
         .row
             -for(var i=0;i<3;i++){
             .col-sm-4
-                p(id='pid'+i) Some text..
+                p(id='pid'+i) 
                 |       
                 img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
             -}
@@ -56,7 +59,7 @@ block content
         .row
             -for(var i=3;i<6;i++){
             .col-sm-4
-                p(id='pid'+i) Some text..
+                p(id='pid'+i) Some text
                 |       
                 img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
             -}

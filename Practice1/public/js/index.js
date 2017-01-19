@@ -1,5 +1,4 @@
 ﻿var socket = io();
-var word= []
 
 $('#send-message-btn').click(function () {
     var msg = $('#message-box').val();
@@ -21,3 +20,4 @@ socket.on('chat', function (msg) {
     });
         
 });
+ 
