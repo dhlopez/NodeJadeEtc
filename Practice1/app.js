@@ -13,9 +13,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.get('/', routes.index);
 app.get('/', function (req, res) {
-    var words = ["Some text..", "Some text..", "Some text..", "Some text..", "Some text..", "Some text.."];
     res.render('index', {
-        outwords: JSON.stringify(words)
+       // outwords: JSON.stringify(words)
+        "outwords": ["Some text..", "Some text..", "Some text..", "Some text..", "Some text..", "Some text.."]
     });
 });
 

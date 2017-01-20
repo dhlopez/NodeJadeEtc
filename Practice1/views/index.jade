@@ -2,10 +2,8 @@
 
 block content
 
-    script(type='text/javascript'). 
-        var awords = JSON.parse('!{outwords}');
-        alert(awords[0]);
-        console.log(awords[0]);
+    //script(type='text/javascript'). 
+    //var awords = JSON.parse('!{outwords}');
     nav.navbar.navbar-inverse
         .container-fluid
         .navbar-header
@@ -50,7 +48,9 @@ block content
         .row
             -for(var i=0;i<3;i++){
             .col-sm-4
-                p(id='pid'+i) 
+                script.
+                    var awords = #{outwords};
+                p(id='pid'+i) #{awords.outwords[0]};
                 |       
                 img.bg-2.img-responsive(src='https://placehold.it/150x80?text=IMAGE', style='width:100%', alt='Image')
             -}
